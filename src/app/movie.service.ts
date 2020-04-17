@@ -7,7 +7,7 @@ import { Movie } from './movie';
   providedIn: 'root'
 })
 export class MovieService {
-  private moviesUrl = 'http://www.omdbapi.com/?apikey=299829c&s=Batman&type=movie';
+  private moviesUrl = 'https://www.omdbapi.com/?apikey=299829c&s=Batman&type=movie';
   constructor(private http: HttpClient) { }
 
   getMovies() {
@@ -15,7 +15,7 @@ export class MovieService {
   }
 
   getMovieDetails(movieId : string) {
-    const detailsUrl = `http://www.omdbapi.com/?apikey=299829c&i=${movieId}`;
+    const detailsUrl = `https://www.omdbapi.com/?apikey=299829c&i=${movieId}`;
     return this.http.get<Movie>(detailsUrl);
   }
 }
