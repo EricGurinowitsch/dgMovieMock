@@ -38,10 +38,14 @@ export class MoviesComponent implements OnInit {
         this.filteredMovieList = this.finalMovieList;
       break;
       case "2000": 
-        this.filteredMovieList = this.finalMovieList.filter(filteredMovie => Number(filteredMovie.Year) >= 2000);
+        this.filteredMovieList = this.finalMovieList.filter(
+          filteredMovie => Number(filteredMovie.Year) < 3000
+          && Number(filteredMovie.Year) >= 2000);
       break;
       case "1990": 
-        this.filteredMovieList = this.finalMovieList.filter(filteredMovie => Number(filteredMovie.Year) < 2000);
+        this.filteredMovieList = this.finalMovieList.filter(
+          filteredMovie => Number(filteredMovie.Year) < 2000
+          && Number(filteredMovie.Year) >= 1990);
       break;
       default: this.finalMovieList;
     }
