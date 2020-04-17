@@ -1,0 +1,28 @@
+<div class="movie-list">
+    <div class="movie-filter-btns" (click)="toggleFilterBtnSelected($event)">
+        <button type="button" class="filter-btn filter-btn-selected" id="allMovies" (click)="filterYear($event)">All</button>
+        <button type="button" class="filter-btn" id="2000" (click)="filterYear($event)">2000's</button>
+        <button type="button" class="filter-btn"  id="1990" (click)="filterYear($event)">1990's</button>
+    </div>
+    <ul class="movie-list-details">
+        <li *ngFor="let movie of filteredMovieList">
+            <div class="movie-poster">
+                <img src="../assets/images/{{movie.imdbID}}.jpg" />
+            </div>
+            <div class="movie-details"> 
+                <h2>{{movie.Title}}</h2>
+                <div class="movie-info">
+                    <span class="rating">{{movie.Rated}}</span>
+                    <span class="runtime">{{movie.Runtime}}</span>
+                    <span class="released">{{movie.Released}}</span>
+                </div>                    
+                <p class="plot">
+                    {{movie.Plot}}
+                </p>
+                <a class="view-btn" href="https://www.imdb.com/title/{{movie.imdbID}}/" target="_blank">
+                    View on IMDB
+                </a>
+            </div>
+        </li>
+    </ul>
+</div>
