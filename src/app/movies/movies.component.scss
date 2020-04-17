@@ -25,6 +25,7 @@ $filterBtnDarkGray: #61696E;
             font-size: .875rem;
             padding: 9px 24px;
             outline: none;
+            margin: 0;
             &.filter-btn-selected{
                 background-color: $btnBlue;
                 color: $white;
@@ -63,7 +64,7 @@ $filterBtnDarkGray: #61696E;
                 }
                 img{
                     width: 140px;
-                    height: auto;
+                    height: 207px;
                     border-radius: 8px;
                 }
             }
